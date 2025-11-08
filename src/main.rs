@@ -18,9 +18,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let mut terminal = Terminal::new(backend)?;
 
     terminal.draw(|f| {
-        let block = Block::default()
-            .title("Typing Speed Evaluator")
-            .borders(Borders::ALL);
+        let block = Block::default().title("TSER").borders(Borders::ALL);
         f.render_widget(Paragraph::new("Press esc to quit").block(block), f.area());
     })?;
 
@@ -41,3 +39,4 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     terminal.show_cursor()?;
     Ok(())
 }
+
